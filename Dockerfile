@@ -1,4 +1,13 @@
-FROM ubuntu:latest
-LABEL authors="mouctar"
+FROM node:18-alpine
 
-ENTRYPOINT ["top", "-b"]
+LABEL authors="mouctar"
+WORKDIR /app
+COPY package-lock.json ./
+RUN npm install
+
+COPY . .
+RUN npm run build
+
+EXPOSE 3000
+
+CMD ["node", "dist/index.js"]
