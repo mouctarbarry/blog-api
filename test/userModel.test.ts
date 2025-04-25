@@ -24,7 +24,7 @@ describe('User Model Test', ()=>{
         const savedUser = await user.save();
 
         expect(savedUser._id).toBeDefined();
-        expect(savedUser.email).toBe("Mouctar");
+        expect(savedUser.name).toBe("Mouctar");
         expect(savedUser.email).toBe("mouctar@caramail.fr");
         expect(savedUser.password).toBe("secured-password-1020");
     });
