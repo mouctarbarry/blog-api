@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 import { User } from "../src/models/Users";
-import dotenv from "dotenv";
+import {loadEnvConfig} from "../src/utils/env-utils";
 
-dotenv.config();
+loadEnvConfig();
 
 beforeAll(async ()=>{
     await mongoose.connect(process.env.MONGODB_URI || '');
