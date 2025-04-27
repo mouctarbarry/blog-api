@@ -1,6 +1,8 @@
 import express from 'express';
 import mongoose from "mongoose";
 import {loadEnvConfig} from "./utils/env-utils";
+import userRoutes from "./routes/user.routes";
+import postRoutes from "./routes/post.routes";
 
 loadEnvConfig()
 
@@ -24,3 +26,6 @@ mongoose.connect(MONGO_URI)
 app.get('/', (_, res) => {
     res.send('Bienvenue sur l’API TypeScript MongoDB 🎉');
 });
+
+app.use('/api/user', userRoutes);
+app.use('/api/post', postRoutes);

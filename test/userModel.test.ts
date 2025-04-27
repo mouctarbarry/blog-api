@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { User } from "../src/models/Users";
+import { User } from "../src/models/User";
 import {loadEnvConfig} from "../src/utils/env-utils";
 
 loadEnvConfig();
