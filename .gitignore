@@ -1,6 +1,5 @@
 node_modules
 .idea
 .env.*
-./dist
-/.env.prod
-/.env.test
+/dist
+
