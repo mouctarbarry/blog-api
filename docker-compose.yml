@@ -9,6 +9,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: secret-password
+      MONGO_INITDB_DATABASE: blogdb
     volumes:
       - mongo-data:/data/db
 
