@@ -1,9 +1,17 @@
 import { Request, Response } from "express";
 import { Post } from "../models/Post";
+import {User} from "../models/User";
 
 export const createPost = async (req: Request, res: Response) => {
     try {
         const { title, content, author } = req.body;
+
+        // Vérifier si l'auteur existe
+        const existingAuthor = await User.findById(author);
+        if (!existingAuthor) {
+            return res.status(400).json({ error: "L'auteur spécifié n'existe pas" });
+        }
+
         const post = new Post({ title, content, author });
         const savedPost = await post.save();
         res.status(201).json(savedPost);
