@@ -45,8 +45,8 @@ Une API de blog construite avec **TypeScript** et **Node.js**.
 
 - **`npm run dev`** : Démarre l'application en mode développement.
 - **`npm run build`** : Compile le code TypeScript.
-- **`npm start`** : Démarre l'application en production.
+- **`npm start`** : Démarre l'application en production (ajouter bien `.env.prod`).
 
 ## Auteur
 
-**mouctar**
+**Mouctar**
