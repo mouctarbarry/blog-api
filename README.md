@@ -22,7 +22,7 @@ Une API de blog construite avec **TypeScript** et **Node.js**.
    ```
 
 3. Configurez les variables d'environnement :
-    - Créez un fichier `.env.local` basé sur le modèle `.env.example` (si disponible).
+    - Créez un fichier `.env.local` basé sur le modèle `.env.example`.
 
 4. Lancez l'application en mode développement :
    ```bash
