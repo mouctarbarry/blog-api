@@ -7,7 +7,6 @@ RUN npm install
 
 COPY . .
 RUN npm run build
-ENV NODE_ENV=prod
 
 EXPOSE 3000
 

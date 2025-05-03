@@ -33,7 +33,7 @@ Une API de blog construite avec **TypeScript** et **Node.js**.
 
 1. Construisez l'image Docker :
    ```bash
-   docker build -t mouctar/blog-api:latest .
+   docker run -p 3000:3000 -e MONGODB_URI="mongodb://username:password@localhost:27017/database?authSource=admin" mouctarbarry/blog-api:latest
    ```
 
 2. Exécutez le conteneur :
@@ -45,7 +45,7 @@ Une API de blog construite avec **TypeScript** et **Node.js**.
 
 - **`npm run dev`** : Démarre l'application en mode développement.
 - **`npm run build`** : Compile le code TypeScript.
-- **`npm start`** : Démarre l'application en production (ajouter bien `.env.prod`).
+- **`npm start`** : Démarre l'application en production (ajouter bien `.env.prod` avant).
 
 ## Auteur
 
