@@ -1,0 +1,13 @@
+# Simple Kubernetes Pod to deploy the app contained in mouctarbarry/blog-api:latest
+apiVersion: v1
+kind: Pod
+metadata:
+  name: blog-pod
+  labels:
+    app: web
+spec:
+  containers:
+    - name: web-ctr
+      image: mouctarbarry/blog-api:latest
+      ports:
+        - containerPort: 3000
