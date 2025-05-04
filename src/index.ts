@@ -4,6 +4,21 @@ import {loadEnvConfig} from "./utils/env-utils";
 import userRoutes from "./routes/user.routes";
 import postRoutes from "./routes/post.routes";
 
+
+const app = express();
+app.use(express.json());
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`🚀 Serveur en écoute sur http://localhost:${PORT}`);
+});
+
+app.get('/', (_, res) => {
+    res.send('Bienvenue sur l’API TypeScript MongoDB 🎉');
+});
+/*
+
+
 loadEnvConfig()
 
 const app = express();
@@ -29,3 +44,5 @@ app.get('/', (_, res) => {
 
 app.use('/api/user', userRoutes);
 app.use('/api/post', postRoutes);
+
+ */
