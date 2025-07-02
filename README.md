@@ -1,4 +1,4 @@
-# Blog API (Sandbox project)
+# Blog API (Sandbox project for demo & test purpose)
 
 Une API de blog construite avec **TypeScript** et **Node.js**.
 
